@@ -1,0 +1,36 @@
+$gutter-x: 1.5rem;
+$gutter-y: 1.5rem;
+
+.ui-wrapper {
+  width: 100%;
+  padding-right: $gutter-x*0.5;
+  padding-left: $gutter-y*0.5;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .ui-wrapper {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .ui-wrapper {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .ui-wrapper {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .ui-wrapper {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .ui-wrapper {
+    max-width: 1320px;
+  }
+}

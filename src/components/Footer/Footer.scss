@@ -1,0 +1,70 @@
+.footer {
+  padding: 40px 0;
+  background-color: $blue;
+
+
+  hr {
+    border: none;
+    border-top: 2px solid $pink;
+    margin: 0;
+  }
+  .ui-wrapper {
+    display: grid;
+    gap: 24px;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__top {
+    @media (min-width: 768px) {
+      max-width: 734px;
+      display: grid;
+      grid-template-columns: 256px 1fr;
+      margin: 0 auto;
+      gap: 24px;
+    }
+  }
+  &__terms {
+    @include text;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Merriweather';
+    color: $white;
+    margin: 0;
+  }
+  &__links {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    a {
+      @include text;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $white;
+      margin-bottom: 8px;
+      text-decoration: none;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}

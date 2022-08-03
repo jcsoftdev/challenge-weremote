@@ -1,0 +1,108 @@
+@mixin text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: $black;
+}
+
+@mixin heading1 {
+  @include text;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin heading2 {
+  @include text;
+  color: $grey-neutral-800;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+@mixin heading3 {
+  @include text;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: $grey-neutral-800;
+  
+}
+
+@mixin heading4 {
+  @include text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey-neutral-800;
+}
+
+@mixin label {
+  @include text;
+}
+
+@mixin small-text {
+  @include text;
+  font-family: "Merriweather";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin regular-text {
+  @include text;
+}
+
+@mixin bold-text {
+  @include regular-text;
+  font-weight: 700;
+}
+
+@mixin blockquote-1 {
+  @include text;
+  font-family: "Merriweather", serif;
+  line-height: 32px;
+  color: $grey-neutral-500;
+  
+}
+
+@mixin blockquote-2 {
+  @include text;
+  font-family: "Source Code Pro", monospace;
+  line-height: 24px;
+}
+
+@mixin blockquote-3 {
+  @include text;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  font-style: italic;
+}
+
+@mixin paragraph-bold {
+  @include text;
+
+  font-family: "Merriweather";
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+
+@mixin button {
+  @include heading3;
+  display: inline-block;
+  color: $white;
+  background-color: $pink;
+  border: 1px solid $pink;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    background-color: $purple;
+    border: 1px solid $purple;
+  }
+}

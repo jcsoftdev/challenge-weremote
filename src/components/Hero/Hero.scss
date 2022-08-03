@@ -1,0 +1,107 @@
+.hero {
+  @include text;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 160px;
+    
+  }
+  & .ui-wrapper {
+    z-index: 2;
+  }
+  &:not(.active):not(.previous):not(:first-child) {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    z-index: -2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  &__container {
+    min-height: calc(100vh - 48px);
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      min-height: 676px;
+    }
+  }
+  &__title {
+    margin-top: 1rem;
+    @include heading1;
+    margin-bottom: 1rem;
+    color: $white;
+    &--pink {
+      color: $pink;
+    }
+    @media (min-width: 768px) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    @include bold-text;
+    font-size: 24px;
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    @include blockquote-2;
+    color: $white;
+    margin-bottom: 30px;
+    max-width: 450px;
+  }
+
+  &.active {
+    left: 100%;
+    z-index: 4;
+    animation: show 2s ease-in-out forwards ;
+    
+  }
+
+  &.previous {
+    z-index: 3;
+    left: 0;
+    animation: hide 2s ease-in-out  forwards;
+  }
+}
+
+@keyframes hide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes show {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.testimonial {
+  @include blockquote-1;
+  text-align: center;
+  background-color: $blue;
+  padding: 50px 0 40px;
+  color: $white;
+  @media (min-width: 768px) {
+    // max-width: 500px;
+    // margin: 0 auto;
+    padding: 50px 25vw 30px;
+  }
+  &-author {
+    margin-bottom: 2rem;
+  }
+}
